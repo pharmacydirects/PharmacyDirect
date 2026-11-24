@@ -34,8 +34,12 @@ export default function ProductCard({ product }: { product: Product }) {
           {product.name}
         </Link>
 
-        <p className="text-[11px] text-[#17211b]/45 leading-relaxed min-h-8">
+        <p className="text-[11px] text-[#17211b]/45 leading-relaxed">
           {product.doses}{product.meta ? ` · ${product.meta}` : ""}
+        </p>
+
+        <p className="text-[11px] text-[#17211b]/60 leading-relaxed line-clamp-2">
+          {product.description}
         </p>
 
         <p className="text-[#063f2a] font-black text-xl leading-none mt-1">{product.priceLabel}</p>
